@@ -1,19 +1,22 @@
 # ---- Imports ---- #
-from tkinter import *
+from tkinter import Tk
+from tkinter import Frame
+from tkinter import Label
+from tkinter import Button
 from tkinter import filedialog
 
 
 class Ui():
 
     def __init__(self):
-        self.archivo = NONE
+        self.archivo = None
 
         # Inicio la ventana
         self.ventana = Tk()
         # Configuro la ventana
         self.ventana.title("Practica 0")
         self.ventana.resizable(False, False)
-        self.ventana.iconbitmap("cryptography.ico")
+        #self.ventana.iconbitmap("cryptography.ico")
 
         # Creo el contenedor
         self.contenedor = Frame(self.ventana)
@@ -56,13 +59,13 @@ class Ui():
         # self.lNomArchivo.config(text=str(self.archivo))
 
     def cifrar(self):
-        if self.archivo is NONE:
+        if self.archivo is None:
             print("Selecciona primero un archivo")
         else:
             print("Cifrar")
 
     def decifrar(self):
-        if self.archivo is NONE:
+        if self.archivo is None:
             print("Selecciona primero un archivo")
         else:
             print("Decifrar")
